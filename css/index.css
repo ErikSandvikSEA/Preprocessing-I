@@ -1,128 +1,94 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
-  margin: 0;
+* {
+  box-sizing: border-box;
   padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
-  display: block;
+  margin: 0;
+  max-width: 100%;
+  /* never be bigger than your parent - stop the dreaded horizontal scroll bar*/
+  border: 1px solid grey;
 }
 body {
-  line-height: 1;
+  color: #5691a7;
+  background-color: #fdf9f1;
+  border: 20px solid #ff5757;
+  display: flex;
 }
-ol,
-ul {
-  list-style: none;
+body hr {
+  border: 3px solid #ff5757;
+  width: 100%;
 }
-blockquote,
-q {
-  quotes: none;
+body header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-  content: '';
-  content: none;
+body header div {
+  color: #58ccb9;
 }
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
+body header div h1,
+body header div h2,
+body header div h3,
+body header div h4,
+body header div h5,
+body header div h6 {
+  color: #5691a7;
+}
+body header nav {
+  display: flex;
+  justify-content: space-evenly;
+}
+body section div {
+  color: #58ccb9;
+}
+body section div h1,
+body section div h2,
+body section div h3,
+body section div h4,
+body section div h5,
+body section div h6 {
+  color: #5691a7;
+}
+body section .skills-experience {
+  display: flex;
+  justify-content: space-around;
+}
+body section .skills-experience div {
+  width: 45%;
+}
+body section .skills-experience ul li {
+  text-align: center;
+}
+body footer {
+  display: flex;
+  flex-direction: column;
+}
+body footer .contact-section {
+  display: flex;
+  justify-content: space-evenly;
+}
+body footer .contact-section div {
+  width: 28%;
+}
+@media (max-width: 500px) {
+  body footer .contact-section div {
+    flex-direction: column;
+  }
+}
+body footer div {
+  color: #58ccb9;
+}
+body footer div h1,
+body footer div h2,
+body footer div h3,
+body footer div h4,
+body footer div h5,
+body footer div h6 {
+  color: #5691a7;
+}
+body footer nav {
+  display: flex;
+  justify-content: space-evenly;
+}
+.name-title {
+  display: flex;
+  flex-direction: column;
 }
