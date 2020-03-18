@@ -10,14 +10,21 @@
 @secondary-font-color: #58ccb9;
 @main-font-color: #5691a7;
 @accent-color: #ff5757;
+@heading-font: 'Ubuntu', sans-serif;
+@main-font: 'Baloo Chettan 2', cursive;
 
+//mixin
 .center() {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 }
+.padded() {
+	padding: 4%;
+}
 
 body {
+	font-family: @main-font;
 	color: @main-font-color;
 	background-color: #fdf9f1;
 	border: 20px solid @accent-color;
@@ -30,12 +37,15 @@ body {
 	header {
 		div {
 			color: @secondary-font-color;
+			font-family: @main-font;
 			h1,
 			h2,
 			h3,
 			h4,
 			h5,
 			h6 {
+				text-align: center;
+				font-family: @heading-font;
 				color: @main-font-color;
 			}
 		}
@@ -46,7 +56,11 @@ body {
 		.center();
 	}
 	section {
+		.intro {
+			.padded();
+		}
 		div {
+			font-family: @main-font;
 			color: @secondary-font-color;
 			h1,
 			h2,
@@ -55,35 +69,50 @@ body {
 			h5,
 			h6 {
 				color: @main-font-color;
+				font-family: @heading-font;
 			}
 		}
 		.skills-experience {
+			.padded();
 			display: flex;
 			justify-content: space-around;
 			div {
 				width: 45%;
-			}
-			ul {
-				li {
-					text-align: center;
+				text-align: center;
+
+				.skills-list {
+					justify-content: center;
+					ul {
+						li {
+							text-align: center;
+							width: 50%;
+						}
+					}
 				}
 			}
 		}
 	}
 	footer {
+		.padded();
 		display: flex;
-		flex-direction: column;
-		.contact-section {
-			display: flex;
-			justify-content: space-evenly;
-			div {
-				width: 28%;
+		justify-content: space-around;
+		div {
+			.contact-section {
+				flex-direction: row;
+				.email-phone {
+					display: flex;
+					flex-direction: column;
+					width: 100%;
+				}
 				@media (max-width: 500px) {
 					flex-direction: column;
+					align-items: space-evenly;
+
+					div {
+						width: 100%;
+					}
 				}
 			}
-		}
-		div {
 			color: @secondary-font-color;
 			h1,
 			h2,
@@ -96,7 +125,9 @@ body {
 		}
 		nav {
 			display: flex;
+			flex-direction: column;
 			justify-content: space-evenly;
+			align-items: center;
 		}
 	}
 }
