@@ -4,114 +4,135 @@
   margin: 0;
   max-width: 100%;
   /* never be bigger than your parent - stop the dreaded horizontal scroll bar*/
-  border: 1px solid grey;
 }
-body {
+html {
+  font-size: 62.5%;
+}
+html body {
+  font-size: 1.3rem;
+  padding: 4%;
   font-family: 'Baloo Chettan 2', cursive;
   color: #5691a7;
   background-color: #fdf9f1;
   border: 20px solid #ff5757;
   display: flex;
 }
-body hr {
+html body hr {
   border: 3px solid #ff5757;
   width: 100%;
 }
-body header {
+html body header {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-body header div {
+html body header .name-title {
+  display: flex;
+  flex-direction: column;
+}
+html body header div {
   color: #58ccb9;
   font-family: 'Baloo Chettan 2', cursive;
 }
-body header div h1,
-body header div h2,
-body header div h3,
-body header div h4,
-body header div h5,
-body header div h6 {
+html body header div h1,
+html body header div h2,
+html body header div h3,
+html body header div h4,
+html body header div h5,
+html body header div h6 {
   text-align: center;
   font-family: 'Ubuntu', sans-serif;
   color: #5691a7;
 }
-body header nav {
+html body header nav {
   display: flex;
   justify-content: space-evenly;
 }
-body section .intro {
+html body header nav a {
+  color: #ff5757;
+  font-style: italic;
+}
+html body section .intro {
   padding: 4%;
 }
-body section div {
+html body section div {
   font-family: 'Baloo Chettan 2', cursive;
   color: #58ccb9;
 }
-body section div h1,
-body section div h2,
-body section div h3,
-body section div h4,
-body section div h5,
-body section div h6 {
+html body section div h1,
+html body section div h2,
+html body section div h3,
+html body section div h4,
+html body section div h5,
+html body section div h6 {
   color: #5691a7;
   font-family: 'Ubuntu', sans-serif;
 }
-body section .skills-experience {
+html body section .skills-experience {
   padding: 4%;
+  border: #ff5757 3px solid;
   display: flex;
   justify-content: space-around;
+  align-items: space-between;
 }
-body section .skills-experience div {
+html body section .skills-experience div {
   width: 45%;
   text-align: center;
 }
-body section .skills-experience div .skills-list {
+html body section .skills-experience div .skills-list {
   justify-content: center;
 }
-body section .skills-experience div .skills-list ul li {
+html body section .skills-experience div .skills-list ul li {
   text-align: center;
   width: 50%;
 }
-body footer {
+@media (max-width: 500px) {
+  html body section .skills-experience {
+    flex-direction: column;
+    align-items: space-evenly;
+  }
+  html body section .skills-experience div {
+    width: 100%;
+  }
+}
+html body footer {
   padding: 4%;
   display: flex;
   justify-content: space-around;
+  border: #ff5757 3px solid;
 }
-body footer div {
+html body footer div {
   color: #58ccb9;
 }
-body footer div .contact-section {
+html body footer div .contact-section {
   flex-direction: row;
 }
-body footer div .contact-section .email-phone {
+html body footer div .contact-section .email-phone {
   display: flex;
   flex-direction: column;
   width: 100%;
 }
-@media (max-width: 500px) {
-  body footer div .contact-section {
-    flex-direction: column;
-    align-items: space-evenly;
-  }
-  body footer div .contact-section div {
-    width: 100%;
-  }
+html body footer div .contact-section .email-phone .email a {
+  color: #ff5757;
+  font-style: italic;
 }
-body footer div h1,
-body footer div h2,
-body footer div h3,
-body footer div h4,
-body footer div h5,
-body footer div h6 {
+html body footer div h1,
+html body footer div h2,
+html body footer div h3,
+html body footer div h4,
+html body footer div h5,
+html body footer div h6 {
   color: #5691a7;
 }
-body footer nav {
+html body footer nav {
+  border: #ff5757 3px solid;
+  padding: 4%;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
 }
-.name-title {
-  display: flex;
-  flex-direction: column;
+html body footer nav a {
+  color: #ff5757;
+  font-style: italic;
 }
