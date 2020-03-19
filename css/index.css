@@ -73,7 +73,7 @@ html body section .skills-experience {
   border: #ff5757 3px solid;
   display: flex;
   justify-content: space-around;
-  align-items: space-between;
+  align-items: flex-end;
 }
 html body section .skills-experience div {
   width: 45%;
