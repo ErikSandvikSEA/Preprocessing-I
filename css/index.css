@@ -1,1 +1,138 @@
-/* Compile your LESS file! */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  max-width: 100%;
+  /* never be bigger than your parent - stop the dreaded horizontal scroll bar*/
+}
+html {
+  font-size: 62.5%;
+}
+html body {
+  font-size: 1.3rem;
+  padding: 4%;
+  font-family: 'Baloo Chettan 2', cursive;
+  color: #5691a7;
+  background-color: #fdf9f1;
+  border: 20px solid #ff5757;
+  display: flex;
+}
+html body hr {
+  border: 3px solid #ff5757;
+  width: 100%;
+}
+html body header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+html body header .name-title {
+  display: flex;
+  flex-direction: column;
+}
+html body header div {
+  color: #58ccb9;
+  font-family: 'Baloo Chettan 2', cursive;
+}
+html body header div h1,
+html body header div h2,
+html body header div h3,
+html body header div h4,
+html body header div h5,
+html body header div h6 {
+  text-align: center;
+  font-family: 'Ubuntu', sans-serif;
+  color: #5691a7;
+}
+html body header nav {
+  display: flex;
+  justify-content: space-evenly;
+}
+html body header nav a {
+  color: #ff5757;
+  font-style: italic;
+}
+html body section .intro {
+  padding: 4%;
+}
+html body section div {
+  font-family: 'Baloo Chettan 2', cursive;
+  color: #58ccb9;
+}
+html body section div h1,
+html body section div h2,
+html body section div h3,
+html body section div h4,
+html body section div h5,
+html body section div h6 {
+  color: #5691a7;
+  font-family: 'Ubuntu', sans-serif;
+}
+html body section .skills-experience {
+  padding: 4%;
+  border: #ff5757 3px solid;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+}
+html body section .skills-experience div {
+  width: 45%;
+  text-align: center;
+}
+html body section .skills-experience div .skills-list {
+  justify-content: center;
+}
+html body section .skills-experience div .skills-list ul li {
+  text-align: center;
+  width: 50%;
+}
+@media (max-width: 500px) {
+  html body section .skills-experience {
+    flex-direction: column;
+    align-items: space-evenly;
+  }
+  html body section .skills-experience div {
+    width: 100%;
+  }
+}
+html body footer {
+  padding: 4%;
+  display: flex;
+  justify-content: space-around;
+  border: #ff5757 3px solid;
+}
+html body footer div {
+  color: #58ccb9;
+}
+html body footer div .contact-section {
+  flex-direction: row;
+}
+html body footer div .contact-section .email-phone {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+html body footer div .contact-section .email-phone .email a {
+  color: #ff5757;
+  font-style: italic;
+}
+html body footer div h1,
+html body footer div h2,
+html body footer div h3,
+html body footer div h4,
+html body footer div h5,
+html body footer div h6 {
+  color: #5691a7;
+}
+html body footer nav {
+  border: #ff5757 3px solid;
+  padding: 4%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+html body footer nav a {
+  color: #ff5757;
+  font-style: italic;
+}

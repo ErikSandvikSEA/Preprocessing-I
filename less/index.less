@@ -1,59 +1,163 @@
-// Is this working?
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
-}
-body {
-	line-height: 1;
-}
-ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
-
-/* Set every element's box-sizing to border-box */
+// Brit Reset
 * {
-    box-sizing: border-box;
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	max-width: 100%; /* never be bigger than your parent - stop the dreaded horizontal scroll bar*/
+	// 	border: 1px solid grey;
 }
+// variables
+@secondary-font-color: #58ccb9;
+@main-font-color: #5691a7;
+@accent-color: #ff5757;
+@heading-font: 'Ubuntu', sans-serif;
+@main-font: 'Baloo Chettan 2', cursive;
 
-html, body {
-    height: 100%;
+//mixin
+.center() {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 }
+.padded() {
+	padding: 4%;
+}
+.link-style() {
+	color: @accent-color;
+	font-style: italic;
+}
+html {
+	font-size: 62.5%;
+	body {
+		font-size: 1.3rem;
+		.padded();
 
+		font-family: @main-font;
+		color: @main-font-color;
+		background-color: #fdf9f1;
+		border: 20px solid @accent-color;
+		display: flex;
+		hr {
+			border: 3px solid @accent-color;
+			width: 100%;
+		}
+
+		header {
+			.name-title {
+				display: flex;
+				flex-direction: column;
+			}
+			div {
+				color: @secondary-font-color;
+				font-family: @main-font;
+				h1,
+				h2,
+				h3,
+				h4,
+				h5,
+				h6 {
+					text-align: center;
+					font-family: @heading-font;
+					color: @main-font-color;
+				}
+			}
+			nav {
+				display: flex;
+				justify-content: space-evenly;
+				a {
+					.link-style();
+				}
+			}
+			.center();
+		}
+		section {
+			.intro {
+				.padded();
+			}
+			div {
+				font-family: @main-font;
+				color: @secondary-font-color;
+				h1,
+				h2,
+				h3,
+				h4,
+				h5,
+				h6 {
+					color: @main-font-color;
+					font-family: @heading-font;
+				}
+			}
+			.skills-experience {
+				.padded();
+				border: @accent-color 3px solid;
+				display: flex;
+				justify-content: space-around;
+				align-items: flex-end;
+				div {
+					width: 45%;
+					text-align: center;
+
+					.skills-list {
+						justify-content: center;
+						ul {
+							li {
+								text-align: center;
+								width: 50%;
+							}
+						}
+					}
+				}
+				@media (max-width: 500px) {
+					flex-direction: column;
+					align-items: space-evenly;
+
+					div {
+						width: 100%;
+					}
+				}
+			}
+		}
+		footer {
+			.padded();
+			display: flex;
+			justify-content: space-around;
+			border: @accent-color 3px solid;
+			div {
+				.contact-section {
+					flex-direction: row;
+					.email-phone {
+						display: flex;
+						flex-direction: column;
+						width: 100%;
+						.email {
+							a {
+								.link-style();
+							}
+						}
+					}
+				}
+				color: @secondary-font-color;
+				h1,
+				h2,
+				h3,
+				h4,
+				h5,
+				h6 {
+					color: @main-font-color;
+				}
+			}
+			nav {
+				border: @accent-color 3px solid;
+				.padded();
+				a {
+					.link-style();
+					font-style: italic;
+				}
+				display: flex;
+				flex-direction: column;
+				justify-content: space-evenly;
+				align-items: center;
+			}
+		}
+	}
+}
